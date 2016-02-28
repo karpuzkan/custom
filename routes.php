@@ -57,7 +57,7 @@ Route::group(['middleware'=>['auth', 'ConfigMiddleware', 'AdminMiddleware', 'Nav
 Route::group(['middleware'=>['ConfigMiddleware', 'NavigationMiddleware', 'SiteMiddleware']], function(){
 
     //PARALLAX OR NOT
-    if(\File::exists(base_path('.config')) && json_decode(\File::get(base_path('.config')))->one_page) {
+    if(\File::exists(storage_path('.config')) && json_decode(\File::get(storage_path('.config')))->one_page) {
         // Parallax Eng
         Route::get('/eng', 'SiteController@Parallax');
         // Parallax
