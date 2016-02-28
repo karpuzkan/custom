@@ -34,7 +34,6 @@ class CustomSeeder extends Seeder
             }));
         });
 
-
         // Content Table Seeder
         // banners
         factory(App\Content::class, 5)->create(['type'=>'Banners'])->each(function($u){
